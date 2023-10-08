@@ -16,10 +16,13 @@
 
             <form method="POST" action="{{ route('add_old_student') }}">
                 @csrf
-                <button type="submit" class="btn btn-primary" id="addNewStudentsButton">Add Old Students</button>
+                <button type="submit" class="btn btn-primary" id="addNewStudentsButton">Add Students In Old School</button>
             </form>
             <br>
-            <a href="{{route('new_student')}}"><button class="btn btn-primary" id="NewStudentsButton">New Students</button></a>
+            <a href="{{route('view_old_student')}}"><button class="btn btn-primary" id="NewStudentsButton">View Old Student</button></a>
+            <br>
+            <br>
+            <a href="{{route('new_student')}}"><button class="btn btn-primary" id="NewStudentsButton">New School</button></a>
         </div>
     </div>
 </body>

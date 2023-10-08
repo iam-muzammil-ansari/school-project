@@ -12,6 +12,7 @@ class old_students extends Model
 
     protected $fillable=[
         'name',
-        'age'
+        'age',
+        'grade'
     ];
 }

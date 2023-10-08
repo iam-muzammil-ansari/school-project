@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<a href="{{route('old_student')}}"><button class="btn btn-primary" id="OldStudentsButton">Back</button></a>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="text-center">
             <h1>Add New School Students</h1>
@@ -16,8 +17,10 @@
 
             <form method="POST" action="{{ route('add_new_student') }}">
                 @csrf
-                <button type="submit" class="btn btn-primary" id="addNewStudentsButton">Add New Students</button>
+                <button type="submit" class="btn btn-primary" id="addNewStudentsButton">Add Students In New School</button>
             </form>
+            <br>
+            <a href="{{route('view_old_student')}}"><button class="btn btn-primary" id="OldStudentsButton">View New Students</button></a>
         </div>
     </div>
 </body>

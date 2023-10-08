@@ -10,6 +10,7 @@ class new_students extends Model
     use HasFactory;
     protected $fillable=[
         'name',
-        'age'
+        'age',
+        'grade'
     ];
 }
