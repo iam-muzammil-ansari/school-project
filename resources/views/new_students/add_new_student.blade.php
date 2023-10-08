@@ -9,18 +9,27 @@
 </head>
 
 <body>
-<a href="{{route('old_student')}}"><button class="btn btn-primary" id="OldStudentsButton">Back</button></a>
+    <a href="{{ route('old_student') }}"><button class="btn btn-primary" id="OldStudentsButton">Back</button></a>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="text-center">
             <h1>Add New School Students</h1>
-            <p id="message">{{ $message }}</p>
+
+            @if (!empty($message))
+            <div class="alert alert-success mt-3">
+                {{ $message }}
+            </div>
+            @else
+            <div class="alert alert-info mt-3">
+                Please add students in the old school first.
+            </div>
+            @endif
 
             <form method="POST" action="{{ route('add_new_student') }}">
                 @csrf
-                <button type="submit" class="btn btn-primary" id="addNewStudentsButton">Add Students In New School</button>
+                <button type="submit" class="btn btn-primary mt-3" id="addNewStudentsButton">Add Students in New School</button>
             </form>
-            <br>
-            <a href="{{route('view_old_student')}}"><button class="btn btn-primary" id="OldStudentsButton">View New Students</button></a>
+
+            <a href="{{ route('view_new_student') }}" class="btn btn-primary mt-3">View New Students</a>
         </div>
     </div>
 </body>

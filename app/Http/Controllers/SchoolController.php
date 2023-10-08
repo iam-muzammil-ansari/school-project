@@ -85,7 +85,7 @@ class SchoolController extends Controller
     public function view_newStudent()
     {
         // Step 8: Retrieve and display new students.
-        $newStudents = old_students::orderBy('name', 'desc')->get();
+        $newStudents = new_students::all();
 
         return view('new_students/view_new_students', compact('newStudents'));
     }
@@ -94,7 +94,7 @@ class SchoolController extends Controller
     private function generateStudents($count)
     {
         $names = [
-            'Muzammil', 'Sandeep', 'Ayaan', 'aman', 'Harsh', 'Neha', 'Deepak', 'Shreya',
+            'Muzammil', 'Sandeep', 'Ayaan', 'Aman', 'Harsh', 'Neha', 'Deepak', 'Shreya',
             'Vikram', 'Meera', 'Rahul', 'Moinuddin', 'Sanjay', 'Farhin', 'Akansha', 'Sakshi',
             'Arun', 'Swati', 'Farhan', 'Muskan', 'Prakash', 'Amaan', 'Sunil', 'Umara',
         ];

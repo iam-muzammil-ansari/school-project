@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>old Students</title>
+    <title>OldSchool Students</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div class="container mt-3">
-        <h2>Old School Students List</h2>
-        <table class="table table-hover mt-2">
-            <thead>
+    <div class="container mt-5">
+        <h2 class="text-center">OldSchool Students List</h2>
+        <table class="table table-striped table-bordered mt-3">
+            <thead class="table-dark">
                 <tr>
-                    <th>S.No</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Grade</th>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Grade</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($oldStudents as $old)
                 <tr>
-                    <td>{{ $loop->index+1}}</td>
+                    <th scope="row">{{ $loop->index+1}}</th>
                     <td>{{$old->name}}</td>
                     <td>{{$old->age}}</td>
                     <td>{{$old->grade}}</td>
